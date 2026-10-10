@@ -11,9 +11,11 @@
 #include <string.h>
 
 int main(int argc, char *argv[])
-{
+{   
+    printf("Lab 6 Git  and Github Version of Vector Calculator\n");
     if (argc > 1){
         if (strcmp(argv[1], "-") == 0) {
+            
             printUI();
             return 0;
         }
