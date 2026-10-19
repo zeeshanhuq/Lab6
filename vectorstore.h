@@ -9,9 +9,12 @@
 #define VECTORSTORE_H
 
 #include "vectorops.h"
-#define MAX_VECTORS 10
+#define STARTING_VECTORS 10
+extern int vectorCount;
+int initialize();
 int addVect(vect v);
 int findVect(const char *name);
 int getVector(int index, vect *result);
 int clear();
+int reallocateVectors();
 #endif // VECTORSTORE_H

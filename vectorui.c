@@ -165,7 +165,7 @@ static int evaluateExpression(const char *expr, vect *result) {
 static void handleList(void){
     vect v;
     int count = 0;
-    for (int i = 0; i < MAX_VECTORS; i++) {
+    for (int i = 0; i < vectorCount; i++) {
         if(getVector(i, &v) == 0) {
             printVector(&v);
             count++;
@@ -196,7 +196,7 @@ static int handleAssignment(char *line, char *eq)
     }
     strcpy(result.name, name);
     if (addVect(result) < 0) {
-        printf("Error: Vector storage is full. Cannot add vector '%s'.\n", name);
+        reallocateVectors();
         return 0;
     }
     printVector(&result);
@@ -248,12 +248,13 @@ int printUI(void)
            "  list              show all stored vectors\n"
            "  clear             delete all stored vectors\n"
            "  quit              exit\n"
-           "Put spaces around =, +, - and *.\n", MAX_VECTORS);
+           "Put spaces around =, +, - and *.\n", vectorCount);
     return 0;
 }
 
 int runUI(void)
 {
+    initialize();
     char line[LINE_LENGTH];
 
     for (;;) {
