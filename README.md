@@ -1,1 +1,1 @@
-# Lab6 Git and GitHub
+# Lab7 Vector Calculator Update
