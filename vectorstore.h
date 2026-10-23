@@ -1,7 +1,7 @@
 /*
 * Filename: vectorstore.h
 * Author: Zeeshan Huq
-* Date: 10/1/26
+* Date: 10/23/26
 * Description: Header file for vector storage functions.
 */
 
@@ -9,12 +9,11 @@
 #define VECTORSTORE_H
 
 #include "vectorops.h"
-#define STARTING_VECTORS 10
-extern int vectorCount;
-int initialize();
+
 int addVect(vect v);
 int findVect(const char *name);
 int getVector(int index, vect *result);
+int vectorCount(void);
 int clear();
-int reallocateVectors();
+void cleanupStorage(void);
 #endif // VECTORSTORE_H
