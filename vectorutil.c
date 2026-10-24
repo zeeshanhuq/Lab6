@@ -33,19 +33,19 @@ int validateVectorName(const char *name) {
     static const char *reserved[] = {"quit", "list", "clear", "load", "save", "fill"};
 
     if (!isalpha((unsigned char)name[0]) || strlen(name) >= NAME_LENGTH) {
-        return 0; // Invalid first character or length
+        return 0; 
     }
     for (int i = 0; name[i] != '\0'; i++) {
         if (!isalnum((unsigned char)name[i]) && name[i] != '_') {
-            return 0; // Invalid character found
+            return 0; 
         }
     }
     for (size_t i = 0; i < sizeof reserved / sizeof reserved[0]; i++) {
         if (strcmp(name, reserved[i]) == 0) {
-            return 0; // Reserved command word
+            return 0;
         }
     }
-    return 1; // Valid name
+    return 1; 
 }
 
 // The first-character check stops strtod from accepting "", "inf", "nan".
