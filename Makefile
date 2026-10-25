@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES= main.c vectorops.c vectorstore.c vectorui.c
+SOURCES= main.c vectorops.c vectorstore.c vectorui.c vectorutil.c vectorfile.c
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=vect
 all: $(SOURCES) $(EXECUTABLE)

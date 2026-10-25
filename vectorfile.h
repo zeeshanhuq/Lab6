@@ -9,7 +9,7 @@
 #define VECTORFILE_H
 
 #define FILE_OK          0
-#define FILL_ERR_OPEN   -1
+#define FILE_ERR_OPEN   -1
 #define FILE_ERR_MEMORY -2
 #define FILE_ERR_IO     -3
 

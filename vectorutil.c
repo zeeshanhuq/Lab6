@@ -19,7 +19,7 @@ char *trimWhitespace(char *str){
     }
 
     if(*str == 0){
-        return *str;
+        return str;
     }
     end = str + strlen(str) - 1;
     while( end > str && isspace((unsigned char) *end)){

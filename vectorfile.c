@@ -21,7 +21,7 @@ static int parseCsvLine(char *line, vect *out){
 
     for(int i = 0; i < 3; i++){
         char *comma = strchr(p, ',');
-        if (comma = NULL){
+        if (comma == NULL){
             return 0;
         }
         *comma = '\0';

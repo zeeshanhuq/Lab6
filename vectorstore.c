@@ -54,7 +54,7 @@ int addVect(vect v) {
 }
 
 int getVector(int index, vect *result) {
-    if (index < 0 || index >= vectorCount) {
+    if (index < 0 || index >= count) {
         return -1; // Invalid index or unused slot
     }
     *result = vectorArray[index];
