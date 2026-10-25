@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {   
     atexit(cleanupStorage);
     if (argc > 1){
-        if (strcmp(argv[1], "-") == 0) {
+        if (strcmp(argv[1], "-h") == 0) {
             
             printUI();
             return 0;
